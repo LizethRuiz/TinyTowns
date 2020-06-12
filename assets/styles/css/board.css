@@ -1,0 +1,172 @@
+
+.containerFondo{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  background-image: url("../../images/fondoTablero.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.imgTitle{
+  width: 500px;
+  height: 80px;
+}
+.panelBuildings{
+  height: 600px;
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.panelBuildings::-webkit-scrollbar {
+    width: 6px;
+    height: 2px;
+    /* display: none; */
+}
+
+.panelBuildings::-webkit-scrollbar-thumb {
+    background: #baad75;
+    border-radius: 5px;
+}
+
+.halfRow-build{
+  width:50%;
+  height: 250px;
+  padding: 5px;
+}
+
+.half-content{
+  width:25%;
+  height: 120px;
+  padding:3px;
+}
+
+.half-content-enabled{
+  width:25%;
+  height: 120px;
+  padding:3px;
+  cursor: pointer;
+}
+
+.half-content-disabled{
+  width:25%;
+  height: 120px;
+  padding:3px;
+  pointer-events: none;
+}
+
+.halfRow-board{
+  width:100%;
+  height: 100%;
+  background-image: url("../../images/pasto.jpg");
+  border-radius: 2px;
+  background-size: 100% 100%;
+}
+
+.titleCard{
+  width:100%;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: rgb(56, 40, 29)
+}
+
+.contImg{
+  width: 100%;
+  padding-top: 115px;
+  text-align: center;
+  align-items: center;
+}
+
+.formImg1{
+  width:100px;
+  height: 55px;
+}
+
+.formImg2{
+  width:70px;
+  height: 60px;
+}
+
+.formImg3{
+  width:70px;
+  height: 40px;
+}
+
+.three-build{
+  width:30%;
+  height: 100px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.three-build-disable{
+  width:30%;
+  height: 100px;
+  padding: 5px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.three-build-enabled{
+  width:30%;
+  height: 100px;
+  padding: 5px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.contImgRec{
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.contImgRec{
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.imgRecEd{
+  padding-top: 5px;
+  width: 70%;
+  height: 90%;
+}
+
+.yCardBack{
+  background-image: url("../../images/buildingCards/amarillaTrasera.jpg");
+  background-size: 100% 100%;
+}
+
+.oCardBack{
+  background-image: url("../../images/buildingCards/naranjaTrasera.jpg");
+  background-size: 100% 100%;
+}
+
+.rCardBack{
+  background-image: url("../../images/buildingCards/rojaTrasera.jpg");
+  background-size: 100% 100%;
+}
+
+.gCardBack{
+  background-image: url("../../images/buildingCards/grisTrasera.jpg");
+  background-size: 100% 100%;
+}
+
+.vCardBack{
+  background-image: url("../../images/buildingCards/verdeTrasera.jpg");
+  background-size: 100% 100%;
+}
+
+.bCardBack{
+  background-image: url("../../images/buildingCards/negraTrasera.jpg");
+  background-size: 100% 100%;
+}
+
+.blueCardBack{
+  background-image: url("../../images/buildingCards/azulTrasera.jpg");
+  background-size: 100% 100%;
+}

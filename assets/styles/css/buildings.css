@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap');
+
+html{
+  overflow-x:hidden;
+}
+body::-webkit-scrollbar{
+  width: 7px;
+  background: transparent;
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: rgb(129, 72, 30);
+  border-radius: 50px;
+}
+.back{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  background-image: url("../../images/fondoMadera.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header{
+  padding:20px;
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+}
+
+.imgHeader{
+  width: 700px;
+  height: 150px;
+}
+
+.imgStyle{
+  width:50px;
+  height: 50px;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(223, 193, 33);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+
+.halfRow{
+  width:50%;
+  height: 250px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.halfRowDisabled{
+  width:50%;
+  height: 250px;
+  padding: 5px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.halfRow:hover{
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: -1px 2px 5px -1px rgba(0,0,0,0.75);
+  border-radius: 5px;
+}
+.cardFront{
+  width:100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.titleCardBack{
+  width:100%;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-family: 'Tenali Ramakrishna',sans-serif;
+  font-size: 22px;
+  color: rgb(56, 40, 29)
+}
+
+.containerImg{
+  width: 100%;
+  padding-top: 140px;
+  text-align: center;
+  align-items: center;
+}
+
+.containerImg2{
+  width: 100%;
+  padding-top: 120px;
+  text-align: center;
+  align-items: center;
+}
+
+.yellowFront{
+  background-image: url("../../images/buildingCards/amarillaFrontal.jpg");
+  background-size: 100% 100%;
+}
+
+.yellowBack{
+  background-image: url("../../images/buildingCards/amarillaTrasera.jpg");
+  background-size: cover;
+}
+
+.orangeFront{
+  background-image: url("../../images/buildingCards/naranjaFrontal.jpg");
+  background-size: 100% 100%;
+}
+
+.orangeBack{
+  background-image: url("../../images/buildingCards/naranjaTrasera.jpg");
+  background-size: cover;
+}
+
+.redFront{
+  background-image: url("../../images/buildingCards/rojaFrontal.jpg");
+  background-size: 100% 100%;
+}
+
+.redBack{
+  background-image: url("../../images/buildingCards/rojaTrasera.jpg");
+  background-size: cover;
+}
+
+.grayFront{
+  background-image: url("../../images/buildingCards/grisFrontal.jpg");
+  background-size: 100% 100%;
+}
+
+.grayBack{
+  background-image: url("../../images/buildingCards/grisTrasera.jpg");
+  background-size: cover;
+}
+
+.greenFront{
+  background-image: url("../../images/buildingCards/verdeFrontal.jpg");
+  background-size: 100% 100%;
+}
+
+.greenBack{
+  background-image: url("../../images/buildingCards/verdeTrasera.jpg");
+  background-size: cover;
+}
+
+.blackFront{
+  background-image: url("../../images/buildingCards/negraFrontal.jpg");
+  background-size: 100% 100%;
+}
+
+.blackBack{
+  background-image: url("../../images/buildingCards/negraTrasera.jpg");
+  background-size: cover;
+}
+
+.footer{
+  width: 100%;
+  height: auto;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  text-align: right;
+  align-items: right;
+}

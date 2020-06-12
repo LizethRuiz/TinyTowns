@@ -1,0 +1,41 @@
+//colors
+$red: #E1332D;
+$white: #fff;
+
+
+html, body{
+  margin:0px;
+}
+.containerPrincipal{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../images/fondoIndex.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+.containerButton{
+  text-align: center;
+  margin-top: 600px
+}
+
+.initGameButton{
+  background-color: #F7D82F ;
+  color: #fff;
+  font-family: "Roboto";
+  width: 170px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  padding: 5px;
+  outline: none;
+}
+
+.initGameButton:hover{
+  background-color: #e3bb12 ;
+}

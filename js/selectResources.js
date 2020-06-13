@@ -1,6 +1,14 @@
 let recInGame;
 let edInGame;
 
+let amarillo = {id:10, name:"edAmarillo", img:"amarillo.png"}
+let naranja = {id:11, name:"edNaranja", img:"naranja.png"}
+let rojo = {id:12, name:"edRojo", img:"roja.png"}
+let gris = {id:13, name:"edGris", img:"gris.png"}
+let verde = {id:14, name:"edVerde", img:"verde.png"}
+let negro = {id:15, name:"edNegro", img:"negra.png"}
+let azul = {id:16, name:"edAzul", img:"azul.png"}
+
 //Habilitar tablero
 let boardEnabled = ()=>{
   $('#c00').toggleClass('half-content-enabled');
@@ -28,8 +36,8 @@ let recPointer = (num)=>{
   boardEnabled();
 }
 
-let edPointer = (num)=>{
-  edInGame = num;
+let edPointer = (objeto)=>{
+  edInGame = objeto;
 }
 
 //Se deshabilita tablero
@@ -67,27 +75,27 @@ $(document).ready(function(){
     recPointer(2);
   });
   $('#ed1').click(function(){
-    edPointer(10);
+    edPointer(amarillo);
     console.log(edInGame);
   });
   $('#ed2').click(function(){
     edPointer(11)
-    console.log(edInGame);
+    console.log(naranja);
   });
   $('#ed3').click(function(){
-    edPointer(12)
+    edPointer(rojo)
     console.log(edInGame);
   });
   $('#ed4').click(function(){
-    edPointer(13)
+    edPointer(gris)
   });
   $('#ed5').click(function(){
-    edPointer(14)
+    edPointer(verde)
   });
   $('#ed6').click(function(){
-    edPointer(15)
+    edPointer(negro)
   });
   $('#ed7').click(function(){
-    edPointer(16)
+    edPointer(azul)
   });
 })

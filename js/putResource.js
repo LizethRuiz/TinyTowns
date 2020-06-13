@@ -1,5 +1,6 @@
 let imgRecRoute;
 let clickRec = true;
+let imgBuildRoute;
 
 $(document).ready(function() {
   let putImg = (imgClass, row, col)=>{
@@ -9,11 +10,26 @@ $(document).ready(function() {
     resourcesFill(inGameResources);
     imgResources(inGameResources);
     matriz[row][col] = recInGame.id;
-    globalBuildVal(row,col,matriz[row][col]);
+    console.log(globalBuildVal(row,col,matriz[row][col]));
+  }
+  let putEd = (imgClass, row, col)=>{
+    let res = globalBuildVal(row,col,matriz[row][col]);
+    console.log("val row col: ", matriz[row][col]);
+    console.log("valor de r: ", res);
+    if(res ===1){
+      imgBuildRoute = '../assets/images/builds/' + edInGame.img;
+      $(imgClass).attr('src', imgBuildRoute);
+      matriz[row][col] = edInGame.id;
+      console.log("ahora matriz: ", matriz[row][col]);
+    }
   }
   $('#c00').click(function() {
+    console.log("el valor de esta casilla es ", matriz[0][0])
     if(matriz[0][0]===0){
       putImg('#img00',0,0);
+    }else {
+      console.log("probando esto");
+      putEd('#img00',0,0);
     }
   });
   $('#c01').click(function() {

@@ -1,8 +1,10 @@
 let matriz = [
-                  [0,0,0,0],
-                  [0,0,0,0],
-                  [0,0,0,0],
-                  [0,0,0,0],
+                  [0,0,0,0,0,0],
+                  [0,0,0,0,0,0],
+                  [0,0,0,0,0,0],
+                  [0,0,0,0,0,0],
+                  [0,0,0,0,0,0],
+                  [0,0,0,0,0,0],
                 ];
 let build = localStorage.getItem('inGameBuildings');
 let buildingsInGame = JSON.parse(build);
@@ -36,31 +38,8 @@ let globalBuildVal = (row,col,rec)=>{
       m3=4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
     }
+    
   }
+  console.log("ahora val desde la funcion: ", val);
   return(val);
-  // buildingsInGame.map((item)=>{
-  //   switch(item.name){
-  //     case 'Panaderia':{
-  //
-  //     }break;
-  //     case 'Teatro':{
-  //       m1 = 5;
-  //       m2 = 1;
-  //       m3 = 4;
-  //       let val = valAmarillas(row,col,rec, m1, m2, m3);
-  //     }break;
-  //     case 'Sastre':{
-  //       m1=2;
-  //       m2=5;
-  //       m3=4;
-  //       let val = valAmarillas(row,col,rec, m1, m2, m3);
-  //     }
-  //     case 'Mercado':{
-  //       m1=1;
-  //       m2=5;
-  //       m3=4;
-  //       let val = valAmarillas(row,col,rec, m1, m2, m3);
-  //     }break;
-  //   }
-  // })
 }

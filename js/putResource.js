@@ -1,6 +1,8 @@
-let imgRecRoute;
-let clickRec = true;
-let imgBuildRoute;
+let imgRecRoute; //Ruta imagen recurso
+let imgBuildRoute; //Ruta imagen del edificio
+let col;
+let row;
+let claseImgen;
 
 $(document).ready(function() {
   let putImg = (imgClass, row, col)=>{
@@ -13,98 +15,110 @@ $(document).ready(function() {
     console.log(globalBuildVal(row,col,matriz[row][col]));
   }
   let putEd = (imgClass, row, col)=>{
+    console.log("lo que hay en casilla es: ", matriz[row][col]);
     let res = globalBuildVal(row,col,matriz[row][col]);
     console.log("val row col: ", matriz[row][col]);
     console.log("valor de r: ", res);
-    if(res ===1){
+    if(res === 1){
       imgBuildRoute = '../assets/images/builds/' + edInGame.img;
       $(imgClass).attr('src', imgBuildRoute);
       matriz[row][col] = edInGame.id;
-      console.log("ahora matriz: ", matriz[row][col]);
+      console.log("edificio vale ", matriz[row][col]);
+      // console.log("ancho: ", objReturn.length);
+      console.log(objReturn);
+      for(let i = 0; i<objReturn.length; i++ ){
+        claseImagen = '#img' + objReturn[i].row + objReturn[i].col;
+        console.log("clase image: ", claseImgen)
+        $(claseImagen).attr('src',"");
+        matriz[objReturn[i].row][objReturn[i].col] = 0;
+      }
     }
   }
-  $('#c00').click(function() {
-    console.log("el valor de esta casilla es ", matriz[0][0])
-    if(matriz[0][0]===0){
-      putImg('#img00',0,0);
-    }else {
-      console.log("probando esto");
-      putEd('#img00',0,0);
+  let putOptions = (imgClass,row, col)=>{
+    if(matriz[row][col]===0){
+      putImg(imgClass,row,col);
+    }else{
+      putEd(imgClass,row,col);
     }
-  });
-  $('#c01').click(function() {
-    if(matriz[0][1]===0){
-      putImg('#img01',0,1);
-    }
-  });
-  $('#c02').click(function() {
-    if(matriz[0][2] === 0){
-      putImg('#img02',0,2);
-    }
-  });
-  $('#c03').click(function() {
-    if(matriz[0][3] === 0){
-      putImg('#img03',0,3);
-    }
-  });
-  $('#c10').click(function() {
-    if(matriz[1][0] === 0){
-      putImg('#img10',1,0);
-    }
-  });
+  }
   $('#c11').click(function() {
-    if(matriz[1][1]===0){
-      putImg('#img11',1,1);
-    }
+    row=1;
+    col=1;
+    putOptions('#img11', row, col);
   });
   $('#c12').click(function() {
-    if(matriz[1][2]===0){
-      putImg('#img12',1,2);
-    }
+    row=1;
+    col=2;
+    putOptions('#img12', row, col);
   });
   $('#c13').click(function() {
-    if(matriz[1][3]===0){
-      putImg('#img13',1,3);
-    }
+    row=1;
+    col=3;
+    putOptions('#img13', row, col);
   });
-  $('#c20').click(function() {
-    if(matriz[2][0]===0){
-      putImg('#img20',2,0);
-    }
+  $('#c14').click(function() {
+    row=1;
+    col=4;
+    putOptions('#img14', row, col);
   });
   $('#c21').click(function() {
-    if(matriz[2][1]===0){
-      putImg('#img21',2,1);
-    }
+    row=2;
+    col=1;
+    putOptions('#img21', row, col);
   });
   $('#c22').click(function() {
-    if(matriz[2][2]===0){
-      putImg('#img22',2,2);;
-    }
+    row=2;
+    col=2;
+    putOptions('#img22', row, col);
   });
   $('#c23').click(function() {
-    if(matriz[2][3]===0){
-      putImg('#img23',2,3);
-    }
+    row=2;
+    col=3;
+    putOptions('#img23', row, col);
   });
-  $('#c30').click(function() {
-    if(matriz[3][0]===0){
-      putImg('#img30',3,0);
-    }
+  $('#c24').click(function() {
+    row=2;
+    col=4;
+    putOptions('#img24', row, col);
   });
   $('#c31').click(function() {
-    if(matriz[3][1]===0){
-      putImg('#img31',3,1);
-    }
+    row=3;
+    col=1;
+    putOptions('#img31', row, col);
   });
   $('#c32').click(function() {
-    if(matriz[3][2]===0){
-      putImg('#img32',3,2);
-    }
+    row=3;
+    col=2;
+    putOptions('#img32', row, col);
   });
   $('#c33').click(function() {
-    if(matriz[3][3]===0){
-      putImg('#img33',3,3);
-    }
+    row=3;
+    col=3;
+    putOptions('#img33', row, col);
+  });
+  $('#c34').click(function() {
+    row=3;
+    col=4;
+    putOptions('#img34', row, col);
+  });
+  $('#c41').click(function() {
+    row=4;
+    col=1;
+    putOptions('#img41', row, col);
+  });
+  $('#c42').click(function() {
+    row=4;
+    col=2;
+    putOptions('#img42', row, col);
+  });
+  $('#c43').click(function() {
+    row=4;
+    col=3;
+    putOptions('#img43', row, col);
+  });
+  $('#c44').click(function() {
+    row=4;
+    col=4;
+    putOptions('#img44', row, col);
   });
 });

@@ -38,7 +38,7 @@ $(document).ready(function(){
     console.log(edInGame);
   });
   $('#ed2').click(function(){
-    edPointer(11)
+    edPointer(naranja)
     console.log(edInGame);
   });
   $('#ed3').click(function(){

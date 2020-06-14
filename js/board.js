@@ -47,6 +47,7 @@ $(document).ready(function(){
   //Se dibujan las cartas de edificios con las que se puede jugar
   let builds = localStorage.getItem('inGameBuildings');
   let newBuildings = JSON.parse(builds);
+  console.log(newBuildings);
   let cardInGame = (id1,t1, id2, t2, id3, t3, id4, t4, id5, t5, id6, t6, id7, t7)=>{
     newBuildings.map((item)=>{
       switch(item.cardId){

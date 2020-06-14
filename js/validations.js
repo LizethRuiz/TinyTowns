@@ -8,6 +8,8 @@ let matriz = [
                 ];
 let build = localStorage.getItem('inGameBuildings');
 let buildingsInGame = JSON.parse(build);
+let m4;
+let m5;
 
 let globalBuildVal = (row,col,rec)=>{
   console.log("entra a la funcion glabal")
@@ -79,6 +81,150 @@ let globalBuildVal = (row,col,rec)=>{
         return val;
       }
     }
+    if(buildingsInGame[i].name === 'Cobertizo' || buildingsInGame[i].name === 'Pozo' || buildingsInGame[i].name === 'Fuente' || buildingsInGame[i].name === 'Molino' ){
+      m1=1;
+      m2=5;
+      val = valGris(row,col,rec, m1, m2);
+      console.log("este es el val cobertizo: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Cabaña'){
+      m1=3;
+      m2=4;
+      m3=2;
+      val = valAzul(row,col,rec, m1, m2, m3);
+      console.log("este es el val cabaña: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Convento'){
+      m1=1;
+      m2=3;
+      m3=5;
+      m4=4;
+      val = valNaranja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val convento: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Abadia'){
+      m1=3;
+      m2=5;
+      m3=5;
+      m4=4;
+      val = valNaranja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val abadia: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Capilla'){
+      m1=5;
+      m2=4;
+      m3=5;
+      m4=4;
+      val = valNaranja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val capilla: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Templo'){
+      m1=3;
+      m2=3;
+      m3=5;
+      m4=4;
+      val = valNaranja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val templo: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Invernadero'){
+      m1=2;
+      m2=4;
+      m3=1;
+      m4=1;
+      val = valRoja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val inv: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Granja'){
+      m1=2;
+      m2=2;
+      m3=1;
+      m4=1;
+      val = valRoja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val inv: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Huerta'){
+      m1=5;
+      m2=2;
+      m3=2;
+      m4=1;
+      val = valRoja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val inv: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Granero'){
+      m1=2;
+      m2=2;
+      m3=1;
+      m4=3;
+      val = valRoja(row,col,rec, m1, m2, m3, m4);
+      console.log("este es el val inv: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Fabrica'){
+      m1=1;
+      m2=3;
+      m3=5;
+      m4=5;
+      m5=3;
+      val = valNegraFabrica(row,col,rec, m1, m2, m3, m4, m5);
+      console.log("este es el val fabrica: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Almacen'){
+      m1=3;
+      m2=2;
+      m3=1;
+      m4=2;
+      m5=3;
+      val = valNegraAlmacen(row,col,rec, m1, m2, m3, m4, m5);
+      console.log("este es el val almacen: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+    if(buildingsInGame[i].name === 'Almacen'){
+      m1=5;
+      m2=5;
+      m3=1;
+      m4=1;
+      m5=3;
+      val = valNegraComercio(row,col,rec, m1, m2, m3, m4, m5);
+      console.log("este es el val comercio: ", val);
+      if(val===1){
+        return val;
+      }
+    }
+
   }
   // console.log("ahora val desde la funcion: ", val);
   // return(val);

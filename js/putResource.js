@@ -3,6 +3,8 @@ let imgBuildRoute; //Ruta imagen del edificio
 let col;
 let row;
 let claseImgen;
+let buildLocal = localStorage.getItem('inGameBuildings');
+let buildInGame = JSON.parse(buildLocal);
 
 $(document).ready(function() {
   let putImg = (imgClass, row, col)=>{
@@ -16,23 +18,11 @@ $(document).ready(function() {
   }
   let putEd = (imgClass, row, col)=>{
     console.log("lo que hay en casilla es: ", matriz[row][col]);
-    let res = globalBuildVal(row,col,matriz[row][col]);
-    console.log("val row col: ", matriz[row][col]);
-    console.log("valor de r: ", res);
-    if(res === 1){
-      imgBuildRoute = '../assets/images/builds/' + edInGame.img;
-      $(imgClass).attr('src', imgBuildRoute);
-      matriz[row][col] = edInGame.id;
-      console.log("edificio vale ", matriz[row][col]);
-      // console.log("ancho: ", objReturn.length);
-      console.log(objReturn);
-      for(let i = 0; i<objReturn.length; i++ ){
-        claseImagen = '#img' + objReturn[i].row + objReturn[i].col;
-        console.log("clase image: ", claseImgen)
-        $(claseImagen).attr('src',"");
-        matriz[objReturn[i].row][objReturn[i].col] = 0;
-      }
-    }
+    let rec = matriz[row][col];
+    let idBuild = edInGame;
+    console.log("edificio a poner: ", idBuild);
+    validatePutBuild(idBuild, imgClass, row, col, rec);
+
   }
   let putOptions = (imgClass,row, col)=>{
     if(matriz[row][col]===0){

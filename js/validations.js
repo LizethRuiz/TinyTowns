@@ -10,6 +10,7 @@ let build = localStorage.getItem('inGameBuildings');
 let buildingsInGame = JSON.parse(build);
 let m4;
 let m5;
+let espera = 0;
 
 let globalBuildVal = (row,col,rec)=>{
   console.log("entra a la funcion glabal")
@@ -22,6 +23,8 @@ let globalBuildVal = (row,col,rec)=>{
       m3 = 4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -31,6 +34,8 @@ let globalBuildVal = (row,col,rec)=>{
       m3 = 4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -40,6 +45,8 @@ let globalBuildVal = (row,col,rec)=>{
       m3=4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -51,6 +58,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valAmarillas(row,col,rec, m1, m2, m3);
       console.log("este es el val mercado: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -60,6 +69,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valVerde(row,col,rec, m1, m2);
       console.log("este es el val asilo: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -69,6 +80,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valVerde(row,col,rec, m1, m2);
       console.log("este es el val taberna: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -78,6 +91,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valVerde(row,col,rec, m1, m2);
       console.log("este es el val sala: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -87,6 +102,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valGris(row,col,rec, m1, m2);
       console.log("este es el val cobertizo: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -97,6 +114,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valAzul(row,col,rec, m1, m2, m3);
       console.log("este es el val cabaña: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -108,6 +127,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val convento: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -119,6 +140,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val abadia: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -130,6 +153,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val capilla: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -141,6 +166,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val templo: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -152,6 +179,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val inv: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -163,6 +192,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val inv: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -174,6 +205,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val inv: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -185,6 +218,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       console.log("este es el val inv: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -197,6 +232,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNegraFabrica(row,col,rec, m1, m2, m3, m4, m5);
       console.log("este es el val fabrica: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
@@ -209,10 +246,12 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNegraAlmacen(row,col,rec, m1, m2, m3, m4, m5);
       console.log("este es el val almacen: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }
-    if(buildingsInGame[i].name === 'Almacen'){
+    if(buildingsInGame[i].name === 'Comercio'){
       m1=5;
       m2=5;
       m3=1;
@@ -221,6 +260,8 @@ let globalBuildVal = (row,col,rec)=>{
       val = valNegraComercio(row,col,rec, m1, m2, m3, m4, m5);
       console.log("este es el val comercio: ", val);
       if(val===1){
+        espera = espera+1;
+        console.log("en espera: ", espera);
         return val;
       }
     }

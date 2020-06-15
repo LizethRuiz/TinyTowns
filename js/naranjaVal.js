@@ -80,3 +80,91 @@ let valNaranja = (row,col,rec,m1,m2,m3,m4)=>{
   }
 
 }
+
+let puntosAbadia = (row, col) =>{
+  if(matriz[row-1][col]>=300 && matriz[row-1][col]<600 || matriz[row+1][col]>=300 && matriz[row+1][col]<600 || matriz[row][col+1]>=300 && matriz[row][col+1]<600 || matriz[row][col-1]>=300 && matriz[row][col-1]<600 ){
+    puntosTotal = puntosTotal+3;
+  }
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}
+
+let puntosConvento = (row, col) =>{
+  let num = 0;
+  if(matriz[1][1] === 300){
+    num = num+1;
+  }
+  if(matriz[1][4] === 300){
+    num = num+1;
+  }
+  if(matriz[4][1] === 300){
+    num = num+1;
+  }
+  if(matriz[4][4] === 300){
+    num = num+1;
+  }
+  puntosTotal = puntosTotal + num;
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}
+
+let puntosTemplo = (row, col) =>{
+  console.log("entra al templo");
+  let totalCasas = 0;
+  let totalGranja = 0;
+  let puntua = 0;
+  for(let i= 0; i<6; i++){
+    for(let j=0; j<6; j++){
+      if(matriz[i][j] === 800){
+        totalCasas = totalCasas +1;
+      }
+      if(matriz[i][j] === 400){
+        console.log("encontro granja")
+        totalGranja = totalGranja +1;
+      }
+    }
+  }
+  if(matriz[row+1][col] === 800 && totalGranja !== 0){
+    puntua = puntua + 1;
+    console.log("si entraaa");
+  }
+  if(matriz[row-1][col] === 800 && totalGranja !== 0){
+    puntua = puntua + 1;
+    console.log("si entraaa");
+  }
+  if(matriz[row][col+1] === 800 && totalGranja !== 0){
+    puntua = puntua + 1;
+    console.log("si entraaa");
+  }
+  if(matriz[row][col-1] === 800 && totalGranja !== 0){
+    puntua = puntua + 1;
+    console.log("si entraaa");
+  }
+
+  if(puntua>=2){
+    puntosTotal = puntosTotal + 4;
+    console.log("si entraaa");
+  }
+  console.log("total casas: ", totalCasas);
+  console.log("total granja: ", totalGranja);
+  console.log("total : ", puntosTotal);
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}
+
+let puntosCapilla = (row, col)=>{
+  let totalCasas = 0;
+  let totalGranja = 0;
+  for(let i= 0; i<6; i++){
+    for(let j=0; j<6; j++){
+      if(matriz[i][j] === 800){
+        totalCasas = totalCasas +1;
+      }
+      if(matriz[i][j] === 400){
+        console.log("encontro granja")
+        totalGranja = totalGranja +1;
+      }
+    }
+  }
+  if(totalGranja != 0){
+    puntosTotal = puntosTotal + totalCasas;
+  }
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}

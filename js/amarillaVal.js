@@ -52,3 +52,40 @@ let valAmarillas = (row,col,rec,m1,m2,m3)=>{
     }
   }
 }
+
+let puntosPanaderia = (row, col) =>{
+  if(matriz[row+1][col] === 400 || matriz[row+1][col] === 401 || matriz[row+1][col] === 402 || matriz[row+1][col] === 403
+    || matriz[row+1][col] === 700 || matriz[row+1][col] === 701 || matriz[row+1][col] === 702
+  ){
+    puntosTotal = puntosTotal+3;
+  }
+  if(matriz[row-1][col] === 400 || matriz[row-1][col] === 401 || matriz[row-1][col] === 402 || matriz[row-1][col] === 403
+    || matriz[row-1][col] === 700 || matriz[row-1][col] === 701 || matriz[row-1][col] === 702
+  ){
+    puntosTotal = puntosTotal+3;
+  }
+  if(matriz[row][col-1] === 400 || matriz[row][col-1] === 401 || matriz[row][col-1] === 402 || matriz[row][col-1] === 403
+    || matriz[row][col-1] === 700 || matriz[row][col-1] === 701 || matriz[row][col-1] === 702
+  ){
+    puntosTotal = puntosTotal+3;
+  }
+  if(matriz[row][col+1] === 400 || matriz[row][col+1] === 401 || matriz[row][col+1] === 402 || matriz[row][col+1] === 403
+    || matriz[row][col+1] === 700 || matriz[row][col+1] === 701 || matriz[row][col+1] === 702
+  ){
+    puntosTotal = puntosTotal+3;
+  }
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}
+
+let puntosSastre = (row, col) =>{
+  puntosTotal = puntosTotal+1;
+
+  if(row === 2 && col === 2 || row === 2 && col === 3){
+    puntosTotal = puntosTotal + 1;
+  }
+
+  if(row === 3 && col === 2 || row === 3 && col === 3){
+    puntosTotal = puntosTotal + 1;
+  }
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}

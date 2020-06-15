@@ -4,11 +4,45 @@
   flex-direction: column;
   width: 100vw;
   height: auto;
-  background-image: url("../../images/fondoTablero.jpg");
+  background-image: url("../../images/fondoMadera.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
-
+.cardFront2{
+  width:100%;
+  height:70%;
+  border-radius: 5px;
+}
+.subtitulos{
+  font-weight: 450;
+  font-size: 22px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  color: rgb(69, 61, 54);
+}
+.subtitulos2{
+  font-weight: 450;
+  font-size: 18px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  color: rgb(69, 61, 54);
+}
+.subtitulosMarcador{
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Tenali Ramakrishna', sans-serif;
+  color: rgb(79, 48, 14);
+}
+.marcador{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.divMarcador{
+  width: 50%;
+  text-align: right;
+}
 .imgTitle{
   width: 500px;
   height: 80px;
@@ -40,6 +74,14 @@
   width:25%;
   height: 120px;
   padding:3px;
+}
+
+.half-contentAmarillo{
+  width:25%;
+  height: 120px;
+  padding:3px;
+  border-color:red;
+  border-style: solid;
 }
 
 .half-content-enabled{

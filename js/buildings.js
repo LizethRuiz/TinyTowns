@@ -1,10 +1,10 @@
-let yellowBuildings = [{id:1, name:"Panaderia", img:'panaderia.png', cardId:1, m:0, t:1, l:2, v:1, p:0},{id:2, name:"Teatro", img:'teatro.png', cardId:1, m:2, t:0, l:0, v:1, p:1},{id:3, name:"Sastre", img:'sastre.png', cardId:1, m:0, t:1, l:0, v:1, p:2},{id:4, name:"Mercado", img:'mercado.png', cardId:1, m:1, t:0, l:0, v:1, p:2}];
-let orangeBuildings = [{id:1, name:"Abadia", img:'abadia.png', cardId:2, m:0, t:0, l:1, v:1, p:2},{id:2, name:"Capilla", img:'capilla.png', cardId:2, m:0, t:0, l:0, v:2, p:2},{id:3, name:"Convento", img:'convento.png', cardId:2, m:1, t:0, l:1, v:1, p:1},{id:4, name:"Templo", img:'templo.png', cardId:2, m:0, t:0, l:2, v:1, p:1}];
-let redBuildings = [{id:1, name:"Invernadero", img:'invernadero.png', cardId:3, m:2, t:1, l:0, v:1, p:0},{id:2, name:"Granja", img:'granja.png', cardId:3, m:2, t:2, l:0, v:0, p:0},{id:3, name:"Huerta", img:'huerta.png', cardId:3, m:1, t:2, l:0, v:0, p:1},{id:4, name:"Granero", img:'granero.png', cardId:3, m:1, t:2, l:1, v:0, p:0}];
-let grayBuildings = [{id:1, name:"Cobertizo", img:'pozo.png', cardId:4, m:1, t:0, l:0, v:0, p:1},{id:2, name:"Pozo", img:'pozo.png', cardId:4, m:1, t:0, l:0, v:0, p:1},{id:3, name:"Fuente", img:'pozo.png', cardId:4, m:1, t:0, l:0, v:0, p:1},{id:4, name:"Molino", img:'pozo.png', cardId:4, m:1, t:0, l:0, v:0, p:1}];
-let greenBuildings = [{id:1, name:"Asilo", img:'asilo.png', cardId:5, m:0, t:0, l:0, v:1, p:2},{id:2, name:"Taberna", img:'taberna.png', cardId:5, cardId:5, m:0, t:0, l:2, v:1, p:0},{id:3, name:"Sala de fiesta", img:'salaFiesta.png', cardId:5, cardId:5, m:2, t:0, l:0, v:1, p:0}];
-let blackBuildings = [{id:1, name:"Fabrica", img:'fabrica.png', cardId:6, m:1, t:0, l:2, v:0, p:2},{id:2, name:"Comercio", img:'comercio.png', cardId:6, m:2, t:0, l:1, v:0, p:2},{id:3, name:"Almacen", img:'almacen.png', cardId:6, m:1, t:2, l:2, v:0, p:0}];
-let blueBuildings = {id:0, name:"Cabaña", img:'cabania.png', cardId:7, m:0, t:1, l:1, v:1, p:0};
+let yellowBuildings = [{id:1, name:"Panaderia", img:'panaderia.png', cardId:1, description:'Genera 3 puntos si es adyacente a un edificio rojo o negro'}, {id:2, name:"Sastre", img:'sastre.png', cardId:1, description:'Habitualmente genera 1 punto, más 1 si está dentro de los cuadros centrales'}];
+let orangeBuildings = [{id:1, name:"Abadia", img:'abadia.png', cardId:2, description:'Genera 3 puntos si no es adyacente a un edificio negro, verde o amarillo'},{id:2, name:"Capilla", img:'capilla.png', cardId:2, description:'Genera 1 punto por cada cabaña alimentada'}, {id:3, name:"Convento", img:'convento.png', cardId:2, description:'Genera 1 punto por cada edificio naranja en la esquina del pueblo'},{id:4, name:"Templo", img:'templo.png', cardId:2, description:'Genera 4 puntos si es adyacente de 2 o más cabañas alimentadas'}];
+let redBuildings = [{id:2, name:"Granja", img:'granja.png', cardId:3, description:"Alimenta 4 edificios en cualquier lugar del pueblo"}];
+let grayBuildings = [{id:1, name:"Cobertizo", img:'pozo.png', cardId:4, description:'Genera un punto en cualquier punto que se encuentre'},{id:2, name:"Pozo", img:'pozo.png', cardId:4, description:'Genera 1 punto por cada cabaña adyacente'},{id:3, name:"Fuente", img:'pozo.png', cardId:4, description:'Genera 2 puntos si es adyacente a otra misma'},{id:4, name:"Molino", img:'pozo.png', cardId:4, description:'Genera 2 puntos si es adyacente a un edificio rojo o amarillo'}];
+let greenBuildings = [{id:1, name:"Asilo", img:'asilo.png', cardId:5, description:'Genera -1 si hay 1 de estos, 5 si existen 2, -3 si existen 3, 15 si existen 4, -5 si existen 5, 26 si existen 6 '},{id:2, name:"Taberna", img:'taberna.png', cardId:5, cardId:5, description:'Genera 2 si existe 1, 5 si existen 2, 9 si existen 3, 14 si existen 4, 20 si existen 5'},{id:3, name:"Sala de fiesta", img:'salaFiesta.png', cardId:5, cardId:5, description:'Genera 2 puntos en cualquier punto del pueblo'}];
+let blackBuildings = [{id:1, name:"Fabrica", img:'fabrica.png', cardId:6, description:'Genera 3 puntos en cualquier punto del pueblo'},{id:2, name:"Comercio", img:'comercio.png', cardId:6, description:'Genera 3 puntos en cualquier punto del pueblo'},{id:3, name:"Almacen", img:'almacen.png', cardId:6, description:'Genera 3 puntos en cualquier punto del pueblo'}];
+let blueBuildings = {id:0, name:"Cabaña", img:'cabania.png', cardId:7, description:'Genera 3 puntos si está alimentada'};
 
 let inGameBuildings=[blueBuildings];
 
@@ -30,19 +30,19 @@ let cardDisabled = (id1, id2, id3, id4)=>{
 $(document).ready(function(){
   //Al dar clic sobre edificios amarillos
   $('#yellow1').click(function(){
-    backReturn('#yellowCard1', 'yellowBack', 1, 5,'#backTitleYellow1',yellowBuildings,'#ycombination1');
+    backReturn('#yellowCard1', 'yellowBack', 1, 3,'#backTitleYellow1',yellowBuildings,'#ycombination1');
     cardDisabled('#yellow1', '#yellow2', '#yellow3', '#yellow4');
   });
   $('#yellow2').click(function(){
-    backReturn('#yellowCard2', 'yellowBack', 1, 5,'#backTitleYellow2',yellowBuildings,'#ycombination2');
+    backReturn('#yellowCard2', 'yellowBack', 1, 3,'#backTitleYellow2',yellowBuildings,'#ycombination2');
     cardDisabled('#yellow1', '#yellow2', '#yellow3', '#yellow4');
   });
   $('#yellow3').click(function(){
-    backReturn('#yellowCard3', 'yellowBack', 1, 5,'#backTitleYellow3',yellowBuildings,'#ycombination3');
+    backReturn('#yellowCard3', 'yellowBack', 1, 3,'#backTitleYellow3',yellowBuildings,'#ycombination3');
     cardDisabled('#yellow1', '#yellow2', '#yellow3', '#yellow4');
   });
   $('#yellow4').click(function(){
-    backReturn('#yellowCard4', 'yellowBack', 1, 5,'#backTitleYellow4',yellowBuildings, '#ycombination4');
+    backReturn('#yellowCard4', 'yellowBack', 1, 3,'#backTitleYellow4',yellowBuildings, '#ycombination4');
     cardDisabled('#yellow1', '#yellow2', '#yellow3', '#yellow4');
   });
 
@@ -66,19 +66,19 @@ $(document).ready(function(){
 
   //Al dar clic sobre edificios rojos
   $('#red1').click(function(){
-    backReturn('#redCard1', 'redBack', 1, 5,'#backTitleRed1',redBuildings, '#rcombination1');
+    backReturn('#redCard1', 'redBack', 1, 2,'#backTitleRed1',redBuildings, '#rcombination1');
     cardDisabled('#red1', '#red2', '#red3', '#red4');
   });
   $('#red2').click(function(){
-    backReturn('#redCard2', 'redBack', 1, 5,'#backTitleRed2',redBuildings, '#rcombination2');
+    backReturn('#redCard2', 'redBack', 1, 2,'#backTitleRed2',redBuildings, '#rcombination2');
     cardDisabled('#red1', '#red2', '#red3', '#red4');
   });
   $('#red3').click(function(){
-    backReturn('#redCard3', 'redBack', 1, 5,'#backTitleRed3',redBuildings, '#rcombination3');
+    backReturn('#redCard3', 'redBack', 1, 2,'#backTitleRed3',redBuildings, '#rcombination3');
     cardDisabled('#red1', '#red2', '#red3', '#red4');
   });
   $('#red4').click(function(){
-    backReturn('#redCard4', 'redBack', 1, 5,'#backTitleRed4',redBuildings, '#rcombination4');
+    backReturn('#redCard4', 'redBack', 1, 2,'#backTitleRed4',redBuildings, '#rcombination4');
     cardDisabled('#red1', '#red2', '#red3', '#red4');
   });
 

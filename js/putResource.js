@@ -22,7 +22,7 @@ $(document).ready(function() {
     let idBuild = edInGame;
     console.log("edificio a poner: ", idBuild);
     validatePutBuild(idBuild, imgClass, row, col, rec);
-
+    verPuntos();
   }
   let putOptions = (imgClass,row, col)=>{
     if(matriz[row][col]===0){

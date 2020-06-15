@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../assets/styles/css/buildings.css">
   <link rel="stylesheet" href="../assets/styles/css/board.css">
   <link rel="stylesheet" href="../assets/styles/cssBootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../assets/styles/cssBootstrap/bootstrap.min.css">
 </head>
 
 <body>
@@ -19,10 +20,16 @@
     </div>
     <div class="row-2">
       <div class="col-sm">
+        <div class="subtitulos">
+          Edificios que puedes contruir
+        </div>
+        <div class="subtitulos2">
+          Arrastrar sobre la imagen para ver mas..
+        </div>
         <div class="panelBuildings">
           <div class="row-buildings">
             <div class="halfRow-build">
-              <div class="cardFront yCardBack" id="yellowCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront yCardBack" id="yellowCard">
                 <div class="titleCard" id="backTitleYellow">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -31,7 +38,7 @@
               </div>
             </div>
             <div class="halfRow-build">
-              <div class="cardFront oCardBack" id="orangeCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront oCardBack" id="orangeCard">
                 <div class="titleCard" id="backTitleOrange">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -42,7 +49,7 @@
           </div>
           <div class="row-buildings">
             <div class="halfRow-build">
-              <div class="cardFront rCardBack" id="redCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront rCardBack" id="redCard">
                 <div class="titleCard" id="backTitleRed">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -51,7 +58,7 @@
               </div>
             </div>
             <div class="halfRow-build">
-              <div class="cardFront gCardBack" id="grayCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront gCardBack" id="grayCard">
                 <div class="titleCard" id="backTitleGray">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -62,7 +69,7 @@
           </div>
           <div class="row-buildings">
             <div class="halfRow-build">
-              <div class="cardFront vCardBack" id="greenCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront vCardBack" id="greenCard">
                 <div class="titleCard" id="backTitleGreen">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -71,7 +78,7 @@
               </div>
             </div>
             <div class="halfRow-build">
-              <div class="cardFront bCardBack" id="blackCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront bCardBack" id="blackCard">
                 <div class="titleCard" id="backTitleBlack">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -82,7 +89,7 @@
           </div>
           <div class="row-buildings">
             <div class="halfRow-build">
-              <div class="cardFront blueCardBack" id="blueCard">
+              <div data-toggle="tooltip" data-placement="top" title="Tooltip on top" class="cardFront blueCardBack" id="blueCard">
                 <div class="titleCard" id="backTitleBlue">
                 </div>
                 <div class="contImg" id="containerImg">
@@ -94,6 +101,10 @@
         </div>
       </div>
       <div class="col-6">
+        <div class="marcador">
+            <span class="subtitulosMarcador" id="puntos">
+            </span>
+        </div>
         <div class="row-buildings">
           <div class="half-content" id="c11">
             <div class="halfRow-board">
@@ -216,39 +227,46 @@
         </div>
       </div>
       <div class="col-sm">
+        <div class="subtitulos">
+          Elige un recurso para construir...
+        </div>
         <div class="row-buildings2">
           <div class="three-build" id="rec1">
-              <img id="r1" src="" class="cardFront" alt="">
+              <img id="r1" src="" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="rec2">
-            <img id="r2" src="" class="cardFront" alt="">
+            <img id="r2" src="" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="rec3">
-            <img id="r3" src="" class="cardFront" alt="">
+            <img id="r3" src="" class="cardFront2" alt="">
           </div>
+        </div>
+        <div class="subtitulos">
+          Elige el edificio por construir...
         </div>
         <div class="row-buildings2">
           <div class="three-build" id="ed1">
-              <img id="e1" src="../assets/images/builds/amarillo.png" class="cardFront" alt="">
+              <img id="e1" src="../assets/images/builds/amarillo.png" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="ed2">
-            <img id="e2" src="../assets/images/builds/naranja.png" class="cardFront" alt="">
+            <img id="e2" src="../assets/images/builds/naranja.png" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="ed3">
-            <img id="e3" src="../assets/images/builds/roja.png" class="cardFront" alt="">
+            <img id="e3" src="../assets/images/builds/roja.png" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="ed4">
-            <img id="e4" src="../assets/images/builds/gris.png" class="cardFront" alt="">
+            <img id="e4" src="../assets/images/builds/gris.png" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="ed5">
-            <img id="e5" src="../assets/images/builds/verde.png" class="cardFront" alt="">
+            <img id="e5" src="../assets/images/builds/verde.png" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="ed6">
-            <img id="e6" src="../assets/images/builds/negra.png" class="cardFront" alt="">
+            <img id="e6" src="../assets/images/builds/negra.png" class="cardFront2" alt="">
           </div>
           <div class="three-build" id="ed7">
-            <img id="e7" src="../assets/images/builds/azul.png" class="cardFront" alt="">
+            <img id="e7" src="../assets/images/builds/azul.png" class="cardFront2" alt="">
           </div>
+          <button type="submit" name="button" class="" id="finalizar">Finalizar..</button>
         </div>
       </div>
     </div>
@@ -257,6 +275,10 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script type="text/javascript" src="../js/buildings.js"></script>
   <script type="text/javascript" src="../js/board.js"> </script>
   <script type="text/javascript" src="../js/selectResources.js"></script>
@@ -271,6 +293,12 @@
   <script type="text/javascript" src="../js/negraVal.js"></script>
   <script type="text/javascript" src="../js/validations.js"></script>
   <script type="text/javascript" src="../js/puntos.js"></script>
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
 </body>
 

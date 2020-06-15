@@ -1,3 +1,4 @@
+
 let eliminarRec =(edInGame, row, col, imgClass, val)=>{
 imgBuildRoute = '../assets/images/builds/' + edInGame.img;
 $(imgClass).attr('src', imgBuildRoute);

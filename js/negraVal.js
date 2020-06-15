@@ -298,3 +298,17 @@ let valNegraComercio = (row,col,rec,m1,m2,m3,m4,m5)=>{
     }
   }
 }
+
+let puntosNegra = (row,col)=>{
+  let totNegras = 0;
+  for(let i= 0; i<6; i++){
+    for(let j=0; j<6; j++){
+      if(matriz[i][j] === 700 || matriz[i][j] === 701 || matriz[i][j] === 702 ){
+        totNegras = totNegras +1;
+      }
+    }
+  }
+  let totalParcial = totNegras*3;
+  puntosTotal = puntosTotal + totalParcial;
+  $('#puntos').html("Total puntos: " + puntosTotal);
+}

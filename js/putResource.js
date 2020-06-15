@@ -14,15 +14,12 @@ $(document).ready(function() {
     resourcesFill(inGameResources);
     imgResources(inGameResources);
     matriz[row][col] = recInGame.id;
-    console.log(globalBuildVal(row,col,matriz[row][col]));
   }
   let putEd = (imgClass, row, col)=>{
-    console.log("lo que hay en casilla es: ", matriz[row][col]);
     let rec = matriz[row][col];
     let idBuild = edInGame;
-    console.log("edificio a poner: ", idBuild);
     validatePutBuild(idBuild, imgClass, row, col, rec);
-    verPuntos();
+    //verPuntos();
   }
   let putOptions = (imgClass,row, col)=>{
     if(matriz[row][col]===0){

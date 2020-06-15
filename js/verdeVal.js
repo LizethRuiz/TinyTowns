@@ -4,37 +4,30 @@ let valVerde = (row,col,rec,m1,m2)=>{
     if(col+2 <= 4){
       if(matriz[row][col+2] === m2 && matriz[row][col+1] === m1){
         objReturn = [{row:row, col:col+2}, {row:row, col:col+1}];
-        console.log("valida");
         return(1)
       }
     }else if(col-2 >= 0){
       if(matriz[row][col-2] === m2 && matriz[row][col-1] === m1){
         objReturn = [{row:row, col:col-2}, {row:row, col:col-1}];
-        console.log("valida");
         return(1)
       }
     }
     if(matriz[row][col+1] === m2 && matriz[row][col-1] === m1){
       objReturn = [{row:row, col:col+1}, {row:row, col:col-1}];
-      console.log("valida");
       return(1);
     }else if(matriz[row][col-1] === m2 && matriz[row][col+1] === m1){
       objReturn = [{row:row, col:col-1}, {row:row, col:col+1}];
-      console.log("valida");
       return(1)
     }
   }
   if(rec == m2){
-    console.log("entra al vidrio");
     if(col-2 >= 0){
       if(matriz[row][col-2] === m1 && matriz[row][col-1] === m1){
         objReturn = [{row:row, col:col-2}, {row:row, col:col-1}];
-        console.log("valida");
         return(1);
       }else if(col+2 <= 4){
         if(matriz[row][col+2] === m1 && matriz[row][col+1] === m1){
           objReturn = [{row:row, col:col+2}, {row:row, col:col+1}];
-          console.log("valida");
           return(1);
         }
       }
@@ -43,16 +36,10 @@ let valVerde = (row,col,rec,m1,m2)=>{
 }
 
 let puntosSalaFiesta = (row,col)=>{
-  let totSala = 0;
-  for(let i= 0; i<6; i++){
-    for(let j=0; j<6; j++){
-      if(matriz[i][j] === 602){
-        totSala = totSala + 1;
-      }
-    }
+  puntosTotal = puntosTotal + 2;
+  if(matriz[row-1][col] === 301 || matriz[row+1][col] === 301 || matriz[row][col-1] === 301 || matriz[row][col+1] === 301){
+    puntosTotal = puntosTotal - 3;
   }
-  let totalParcial = totSala*2;
-  puntosTotal = puntosTotal + totalParcial;
   $('#puntos').html("Total puntos: " + puntosTotal);
 }
 
@@ -83,6 +70,9 @@ let puntosAsilo = (row,col) =>{
   if(totAsilo === 6){
     puntosTotal = 26;
   }
+  if(matriz[row-1][col] === 301 || matriz[row+1][col] === 301 || matriz[row][col-1] === 301 || matriz[row][col+1] === 301){
+    puntosTotal = puntosTotal - 3;
+  }
   $('#puntos').html("Total puntos: " + puntosTotal);
 }
 
@@ -109,6 +99,10 @@ let puntosTaberna = (row,col)=>{
   }
   if(totTaberna === 5){
     puntosTotal = 20;
+  }
+
+  if(matriz[row-1][col] === 301 || matriz[row+1][col] === 301 || matriz[row][col-1] === 301 || matriz[row][col+1] === 301){
+    puntosTotal = puntosTotal - 3;
   }
   $('#puntos').html("Total puntos: " + puntosTotal);
 }

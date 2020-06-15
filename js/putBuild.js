@@ -4,12 +4,8 @@ let eliminarRec =(edInGame, row, col, imgClass, val)=>{
 imgBuildRoute = '../assets/images/builds/' + edInGame.img;
 $(imgClass).attr('src', imgBuildRoute);
 matriz[row][col] = val;
-console.log("edificio vale ", matriz[row][col]);
-// console.log("ancho: ", objReturn.length);
-console.log(objReturn);
 for(let i = 0; i<objReturn.length; i++ ){
   claseImagen = '#img' + objReturn[i].row + objReturn[i].col;
-  console.log("clase image: ", claseImgen)
   $(claseImagen).attr('src',"");
   matriz[objReturn[i].row][objReturn[i].col] = 0;
 }
@@ -19,7 +15,6 @@ espera = espera-1;
 let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
   let cartaValidar;
   if(idBuildVal.id === 10){
-    console.log("si entra al 10");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 1){
         cartaValidar = buildInGame[i]
@@ -31,9 +26,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m3 = 4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 200);
+        puntuar(row,col, 200);
       }
     }
       if(cartaValidar.name === "Teatro"){
@@ -42,9 +36,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m3 = 4;
         val = valAmarillas(row,col,rec, m1, m2, m3);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 201);
+          puntuar(row,col, 201);
         }
       }
       if(cartaValidar.name === "Sastre"){
@@ -53,9 +46,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m3=4;
         val = valAmarillas(row,col,rec, m1, m2, m3);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 202);
+          puntuar(row,col, 202);
         }
       }
       if(cartaValidar.name === "Mercado"){
@@ -64,15 +56,13 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m3=4;
         val = valAmarillas(row,col,rec, m1, m2, m3);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 203);
+          puntuar(row,col, 203);
         }
       }
   }
 
   if(idBuildVal.id === 11){
-    console.log("si entra al 11");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 2){
         cartaValidar = buildInGame[i]
@@ -84,11 +74,9 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m3=5;
       m4=4;
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
-      console.log("este es el val convento: ", val);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 300);
+        puntuar(row,col, 300);
       }
     }
       if(cartaValidar.name === "Abadia"){
@@ -98,9 +86,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m4=4;
         val = valNaranja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 301);
+          puntuar(row,col, 301);
         }
       }
       if(cartaValidar.name === "Capilla"){
@@ -110,9 +97,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m4=4;
         val = valNaranja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 302);
+          puntuar(row,col, 302);
         }
       }
       if(cartaValidar.name === "Templo"){
@@ -122,15 +108,13 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m4=4;
         val = valNaranja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 303);
+          puntuar(row,col, 303);
         }
       }
   }
 
   if(idBuildVal.id === 12){
-    console.log("si entra al 12");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 3){
         cartaValidar = buildInGame[i]
@@ -143,9 +127,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m4=1;
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 400);
+        puntuar(row,col, 400);
       }
     }
       if(cartaValidar.name === "Huerta"){
@@ -155,9 +138,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m4=1;
         val = valRoja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 401);
+          puntuar(row,col, 401);
         }
       }
       if(cartaValidar.name === "Granero"){
@@ -167,9 +149,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m4=3;
         val = valRoja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 402);
+          puntuar(row,col, 402);
         }
       }
       if(cartaValidar.name === "Invernadero"){
@@ -179,15 +160,13 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m4=1;
         val = valRoja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 403);
+          puntuar(row,col, 403);
         }
       }
   }
 
   if(idBuildVal.id === 13){
-    console.log("si entra al 13");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 4){
         cartaValidar = buildInGame[i]
@@ -198,9 +177,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m2=5;
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 500);
+        puntuar(row,col, 500);
       }
     }
     if(cartaValidar.name === "Pozo"){
@@ -208,9 +186,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m2=5;
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 501);
+        puntuar(row,col, 501);
       }
     }
     if(cartaValidar.name === "Fuente"){
@@ -218,9 +195,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m2=5;
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 502);
+        puntuar(row,col, 502);
       }
     }
     if(cartaValidar.name === "Molino"){
@@ -228,15 +204,13 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m2=5;
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 503);
+        puntuar(row,col, 503);
       }
     }
   }
 
   if(idBuildVal.id === 14){
-    console.log("si entra al 12");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 5){
         cartaValidar = buildInGame[i]
@@ -247,9 +221,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m2=4;
       val = valVerde(row,col,rec, m1, m2);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass,600);
+        puntuar(row,col, 600);
       }
     }
       if(cartaValidar.name === "Taberna"){
@@ -257,9 +230,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m2=4;
         val = valVerde(row,col,rec, m1, m2);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 601);
+          puntuar(row,col, 601);
         }
       }
       if(cartaValidar.name === "Sala de fiesta"){
@@ -267,15 +239,13 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m2=4;
         val = valVerde(row,col,rec, m1, m2);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 602);
+          puntuar(row,col, 602);
         }
       }
   }
 
   if(idBuildVal.id === 15){
-    console.log("si entra al 15");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 6){
         cartaValidar = buildInGame[i]
@@ -289,9 +259,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m5=3;
       val = valNegraFabrica(row,col,rec, m1, m2, m3, m4, m5);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 700);
+        puntuar(row,col, 700);
       }
     }
       if(cartaValidar.name === "Almacen"){
@@ -302,9 +271,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m5=3;
         val = valNegraAlmacen(row,col,rec, m1, m2, m3, m4, m5);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 701);
+          puntuar(row,col, 701);
         }
       }
       if(cartaValidar.name === "Comercio"){
@@ -315,15 +283,13 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         m5=3;
         val = valNegraComercio(row,col,rec, m1, m2, m3, m4, m5);
         if(val===1){
-          console.log("bien");
-          //return val;
           eliminarRec(idBuildVal, row, col, imgClass, 702);
+          puntuar(row,col, 702);
         }
       }
   }
 
   if(idBuildVal.id === 16){
-    console.log("si entra al 16");
     for (let i = 0; i<buildInGame.length; i++ ){
       if(buildInGame[i].cardId === 7){
         cartaValidar = buildInGame[i]
@@ -335,9 +301,8 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       m3=2;
       val = valAzul(row,col,rec, m1, m2, m3);
       if(val===1){
-        console.log("bien");
-        //return val;
         eliminarRec(idBuildVal, row, col, imgClass, 800);
+        puntuar(row,col, 800);
       }
     }
   }

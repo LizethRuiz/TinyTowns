@@ -13,8 +13,6 @@ let azul = {id:16, name:"edAzul", img:"azul.png"}
 //Se selecciona un recurso
 let recPointer = (num)=>{
   recInGame = inGameResources[num];
-  console.log("en juego ", recInGame.name);
-
 }
 
 //Se selecciona edificio
@@ -23,7 +21,6 @@ let edPointer = (objeto)=>{
 }
 
 $(document).ready(function(){
-  console.log("recursos en juego",inGameResources);
   $('#rec1').click(function() {
     recPointer(0);
   });
@@ -35,30 +32,23 @@ $(document).ready(function(){
   });
   $('#ed1').click(function(){
     edPointer(amarillo);
-    console.log(edInGame);
   });
   $('#ed2').click(function(){
     edPointer(naranja)
-    console.log(edInGame);
   });
   $('#ed3').click(function(){
     edPointer(rojo)
-    console.log(edInGame);
   });
   $('#ed4').click(function(){
     edPointer(gris)
-    console.log(edInGame);
   });
   $('#ed5').click(function(){
     edPointer(verde)
-    console.log(edInGame);
   });
   $('#ed6').click(function(){
     edPointer(negro)
-    console.log(edInGame);
   });
   $('#ed7').click(function(){
     edPointer(azul)
-    console.log(edInGame);
   });
 })

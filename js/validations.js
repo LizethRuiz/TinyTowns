@@ -12,23 +12,13 @@ let m4;
 let m5;
 let espera = 0;
 
-let rellenar = (nombre, fila, columna)=>{
-  if(nombre==='Panaderia'){
-    console.log("si entraaa");
-    for(let i = 0; i<objReturn.length; i++ ){
-      let clase = '#c' + objReturn[i].row + objReturn[i].col;
-      $(clase).toggleClass('half-contentAmarillo');
-    }
+let generaClases = (fila, columna, nameClass)=>{
+  for(let i = 0; i<objReturn.length; i++ ){
+    let clase = '#c' + objReturn[i].row + objReturn[i].col;
+    $(clase).toggleClass(nameClass);
   }
-  if(nombre==='Sastre'){
-    console.log("si entraaa");
-    for(let i = 0; i<objReturn.length; i++ ){
-      let clase = '#c' + objReturn[i].row + objReturn[i].col;
-      $(clase).toggleClass('half-contentAmarillo');
-    }
-    let clase = '#c' + fila + columna;
-    $(clase).toggleClass('half-contentAmarillo');
-  }
+  let clase = '#c' + fila + columna;
+  $(clase).toggleClass(nameClass);
 }
 
 let globalBuildVal = (row,col,rec)=>{
@@ -44,7 +34,6 @@ let globalBuildVal = (row,col,rec)=>{
       if(val===1){
         espera = espera+1;
         console.log("en espera: ", espera);
-        rellenar(buildingsInGame[i].name, row, col);
         return val;
       }
     }
@@ -67,7 +56,6 @@ let globalBuildVal = (row,col,rec)=>{
       if(val===1){
         espera = espera+1;
         console.log("en espera: ", espera);
-        rellenar(buildingsInGame[i].name, row, col);
         return val;
       }
     }

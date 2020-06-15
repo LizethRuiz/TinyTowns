@@ -1,12 +1,46 @@
 let edPuntos = [];
-let termino;
+
 let puntosTotal = 0;
 
 $(document).ready(function() {
+  let termino = true;
+
+  let valVacios = ()=>{
+    for(let i = 1; i<=4; i++){
+      for(let j = 1; j<=4; j++){
+        console.log(matriz[j][i]);
+        if(matriz[j][i] === 0){
+          console.log("si es igual a 0");
+          termino = false;
+        }
+      }
+    }
+  }
+
+  let sumVacios = ()=>{
+    for(let i = 1; i<=4; i++){
+      for(let j = 1; j<=4; j++){
+        console.log(matriz[j][i]);
+        if(matriz[j][i] >=1 && matriz[j][i] <=5){
+          puntosTotal = puntosTotal-1;
+        }
+      }
+    }
+  }
+
   $('#puntos').html("Total puntos: " + puntosTotal);
   $('#edConstruidos').html("Edificios construidos: " + edPuntos.length);
   $('#finalizar').click(function(){
     console.log("cilccc");
+    valVacios();
+    console.log(termino);
+    if(termino === false){
+      alert ("No puede finalizar la partida hasta completar su pueblo...");
+    }else{
+      verPuntos();
+      sumVacios();
+      alert ("Ha construido su pueblo y generado "+ puntosTotal + " puntos");
+    }
   });
 });
 

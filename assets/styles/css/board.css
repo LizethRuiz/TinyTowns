@@ -74,6 +74,7 @@
   width:25%;
   height: 120px;
   padding:3px;
+  border-style: none;
 }
 
 .half-contentAmarillo{
@@ -211,4 +212,23 @@
 .blueCardBack{
   background-image: url("../../images/buildingCards/azulTrasera.jpg");
   background-size: 100% 100%;
+}
+
+.centradoButton{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:rgb(223, 193, 33);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+}
+
+.but{
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
 }

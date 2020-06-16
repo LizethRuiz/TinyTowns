@@ -1,5 +1,4 @@
 
-
 let eliminarRec =(edInGame, row, col, imgClass, val)=>{
 imgBuildRoute = '../assets/images/builds/' + edInGame.img;
 $(imgClass).attr('src', imgBuildRoute);
@@ -10,6 +9,65 @@ for(let i = 0; i<objReturn.length; i++ ){
   matriz[objReturn[i].row][objReturn[i].col] = 0;
 }
 espera = espera-1;
+}
+
+let quitarBordes = (n, fila, columna)=>{
+  if(n===10){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentAmarillo');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentAmarillo');
+  }
+  if(n===11){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentNaranja');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentNaranja');
+  }
+  if(n===12){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentRojo');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentRojo');
+  }
+  if(n===13){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentGris');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentGris');
+  }
+  if(n===14){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentVerde');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentVerde');
+  }
+  if(n===15){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentNegro');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentNegro');
+  }
+  if(n===16){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).removeClass('half-contentAzul');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).removeClass('half-contentAzul');
+  }
 }
 
 let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
@@ -27,6 +85,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 200);
+        quitarBordes(10, row, col);
         puntuar(row,col, 200);
       }
     }
@@ -37,6 +96,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valAmarillas(row,col,rec, m1, m2, m3);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 201);
+          quitarBordes(10, row, col);
           puntuar(row,col, 201);
         }
       }
@@ -47,6 +107,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valAmarillas(row,col,rec, m1, m2, m3);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 202);
+          quitarBordes(10, row, col);
           puntuar(row,col, 202);
         }
       }
@@ -57,6 +118,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valAmarillas(row,col,rec, m1, m2, m3);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 203);
+          quitarBordes(10, row, col);
           puntuar(row,col, 203);
         }
       }
@@ -76,6 +138,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 300);
+        quitarBordes(11, row, col);
         puntuar(row,col, 300);
       }
     }
@@ -87,6 +150,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valNaranja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 301);
+          quitarBordes(11, row, col);
           puntuar(row,col, 301);
         }
       }
@@ -98,6 +162,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valNaranja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 302);
+          quitarBordes(11, row, col);
           puntuar(row,col, 302);
         }
       }
@@ -109,6 +174,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valNaranja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 303);
+          quitarBordes(11, row, col);
           puntuar(row,col, 303);
         }
       }
@@ -128,6 +194,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 400);
+        quitarBordes(12, row, col);
         puntuar(row,col, 400);
       }
     }
@@ -139,6 +206,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valRoja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 401);
+          quitarBordes(12, row, col);
           puntuar(row,col, 401);
         }
       }
@@ -150,6 +218,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valRoja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 402);
+          quitarBordes(12, row, col);
           puntuar(row,col, 402);
         }
       }
@@ -161,6 +230,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valRoja(row,col,rec, m1, m2, m3, m4);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 403);
+          quitarBordes(12, row, col);
           puntuar(row,col, 403);
         }
       }
@@ -178,6 +248,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 500);
+        quitarBordes(13, row, col);
         puntuar(row,col, 500);
       }
     }
@@ -187,6 +258,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 501);
+        quitarBordes(13, row, col);
         puntuar(row,col, 501);
       }
     }
@@ -196,6 +268,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 502);
+        quitarBordes(13, row, col);
         puntuar(row,col, 502);
       }
     }
@@ -205,6 +278,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 503);
+        quitarBordes(13, row, col);
         puntuar(row,col, 503);
       }
     }
@@ -222,6 +296,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valVerde(row,col,rec, m1, m2);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass,600);
+        quitarBordes(14, row, col);
         puntuar(row,col, 600);
       }
     }
@@ -231,6 +306,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valVerde(row,col,rec, m1, m2);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 601);
+          quitarBordes(14, row, col);
           puntuar(row,col, 601);
         }
       }
@@ -240,6 +316,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valVerde(row,col,rec, m1, m2);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 602);
+          quitarBordes(14, row, col);
           puntuar(row,col, 602);
         }
       }
@@ -260,6 +337,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valNegraFabrica(row,col,rec, m1, m2, m3, m4, m5);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 700);
+        quitarBordes(15, row, col);
         puntuar(row,col, 700);
       }
     }
@@ -272,6 +350,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valNegraAlmacen(row,col,rec, m1, m2, m3, m4, m5);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 701);
+          quitarBordes(15, row, col);
           puntuar(row,col, 701);
         }
       }
@@ -284,6 +363,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
         val = valNegraComercio(row,col,rec, m1, m2, m3, m4, m5);
         if(val===1){
           eliminarRec(idBuildVal, row, col, imgClass, 702);
+          quitarBordes(15, row, col);
           puntuar(row,col, 702);
         }
       }
@@ -302,6 +382,7 @@ let validatePutBuild = (idBuildVal, imgClass, row, col, rec)=>{
       val = valAzul(row,col,rec, m1, m2, m3);
       if(val===1){
         eliminarRec(idBuildVal, row, col, imgClass, 800);
+        quitarBordes(16, row, col);
         puntuar(row,col, 800);
       }
     }

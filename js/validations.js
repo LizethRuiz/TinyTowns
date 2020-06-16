@@ -12,6 +12,65 @@ let m4;
 let m5;
 let espera = 0;
 
+let rellenar = (n, fila, columna)=>{
+  if(n===10){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentAmarillo');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentAmarillo');
+  }
+  if(n===11){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentNaranja');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentNaranja');
+  }
+  if(n===12){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentRojo');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentRojo');
+  }
+  if(n===13){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentGris');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentGris');
+  }
+  if(n===14){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentVerde');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentVerde');
+  }
+  if(n===15){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentNegro');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentNegro');
+  }
+  if(n===16){
+    for(let i = 0; i<objReturn.length; i++ ){
+      let clase = '#c' + objReturn[i].row + objReturn[i].col;
+      $(clase).toggleClass('half-contentAzul');
+    }
+    let clase = '#c' + fila + columna;
+    $(clase).toggleClass('half-contentAzul');
+  }
+}
+
 let globalBuildVal = (row,col,rec)=>{
   let val;
   for(let i=0; i<buildingsInGame.length; i++){
@@ -21,6 +80,7 @@ let globalBuildVal = (row,col,rec)=>{
       m3 = 4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        rellenar(10, row, col);
         return val;
       }
     }
@@ -30,6 +90,7 @@ let globalBuildVal = (row,col,rec)=>{
       m3 = 4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        rellenar(10, row, col);
         return val;
       }
     }
@@ -39,6 +100,7 @@ let globalBuildVal = (row,col,rec)=>{
       m3=4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        rellenar(10, row, col);
         return val;
       }
     }
@@ -48,6 +110,7 @@ let globalBuildVal = (row,col,rec)=>{
       m3=4;
       val = valAmarillas(row,col,rec, m1, m2, m3);
       if(val===1){
+        rellenar(10, row, col);
         return val;
       }
     }
@@ -56,6 +119,7 @@ let globalBuildVal = (row,col,rec)=>{
       m2=4;
       val = valVerde(row,col,rec, m1, m2);
       if(val===1){
+        rellenar(14, row, col);
         espera = espera+1;
         return val;
       }
@@ -65,6 +129,7 @@ let globalBuildVal = (row,col,rec)=>{
       m2=4;
       val = valVerde(row,col,rec, m1, m2);
       if(val===1){
+        rellenar(14, row, col);
         return val;
       }
     }
@@ -73,6 +138,7 @@ let globalBuildVal = (row,col,rec)=>{
       m2=4;
       val = valVerde(row,col,rec, m1, m2);
       if(val===1){
+        rellenar(14, row, col);
         return val;
       }
     }
@@ -81,6 +147,7 @@ let globalBuildVal = (row,col,rec)=>{
       m2=5;
       val = valGris(row,col,rec, m1, m2);
       if(val===1){
+        rellenar(13, row, col);
         return val;
       }
     }
@@ -89,7 +156,8 @@ let globalBuildVal = (row,col,rec)=>{
       m2=4;
       m3=2;
       val = valAzul(row,col,rec, m1, m2, m3);
-      if(val===1){;
+      if(val===1){
+        rellenar(16, row, col);
         return val;
       }
     }
@@ -100,6 +168,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=4;
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(11, row, col);
         return val;
       }
     }
@@ -110,6 +179,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=4;
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(11, row, col);
         return val;
       }
     }
@@ -120,6 +190,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=4;
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(11, row, col);
         return val;
       }
     }
@@ -130,6 +201,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=4;
       val = valNaranja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(11, row, col);
         return val;
       }
     }
@@ -140,6 +212,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=1;
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(12, row, col);
         return val;
       }
     }
@@ -150,6 +223,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=1;
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(12, row, col);
         return val;
       }
     }
@@ -160,6 +234,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=1;
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(12, row, col);
         return val;
       }
     }
@@ -170,6 +245,7 @@ let globalBuildVal = (row,col,rec)=>{
       m4=3;
       val = valRoja(row,col,rec, m1, m2, m3, m4);
       if(val===1){
+        rellenar(12, row, col);
         return val;
       }
     }
@@ -181,6 +257,7 @@ let globalBuildVal = (row,col,rec)=>{
       m5=3;
       val = valNegraFabrica(row,col,rec, m1, m2, m3, m4, m5);
       if(val===1){
+        rellenar(15, row, col);
         return val;
       }
     }
@@ -192,6 +269,7 @@ let globalBuildVal = (row,col,rec)=>{
       m5=3;
       val = valNegraAlmacen(row,col,rec, m1, m2, m3, m4, m5);
       if(val===1){
+        rellenar(15, row, col);
         return val;
       }
     }
@@ -203,6 +281,7 @@ let globalBuildVal = (row,col,rec)=>{
       m5=3;
       val = valNegraComercio(row,col,rec, m1, m2, m3, m4, m5);
       if(val===1){
+        rellenar(15, row, col);
         return val;
       }
     }

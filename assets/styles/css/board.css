@@ -78,11 +78,59 @@
 }
 
 .half-contentAmarillo{
-  width:25%;
-  height: 120px;
-  padding:3px;
-  border-color:red;
-  border-style: solid;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(249, 203, 10, 0.92);
+  border-radius: 5px;
+}
+
+.half-contentNaranja{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(231, 124, 14, 0.92);
+  border-radius: 5px;
+}
+
+.half-contentRojo{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(218, 40, 15, 0.96);
+  border-radius: 5px;
+}
+
+.half-contentGris{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(92, 81, 56, 0.96);
+  border-radius: 5px;
+}
+
+.half-contentVerde{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(5, 124, 35, 0.96);
+  border-radius: 5px;
+}
+
+.half-contentNegro{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(11, 14, 33, 0.96);
+  border-radius: 5px;
+}
+
+.half-contentAzul{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  box-shadow: 3px 3px 3px 3px rgba(14, 121, 168, 0.96);
+  border-radius: 5px;
 }
 
 .half-content-enabled{

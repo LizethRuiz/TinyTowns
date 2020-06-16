@@ -14,12 +14,12 @@ $(document).ready(function() {
     resourcesFill(inGameResources);
     imgResources(inGameResources);
     matriz[row][col] = recInGame.id;
+    let r = globalBuildVal(row,col,matriz[row][col]);
   }
   let putEd = (imgClass, row, col)=>{
     let rec = matriz[row][col];
     let idBuild = edInGame;
     validatePutBuild(idBuild, imgClass, row, col, rec);
-    //verPuntos();
   }
   let putOptions = (imgClass,row, col)=>{
     if(matriz[row][col]===0){

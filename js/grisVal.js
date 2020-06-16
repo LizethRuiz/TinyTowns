@@ -11,6 +11,10 @@ let valGris = (row,col,rec,m1,m2)=>{
       objReturn = [{row:row+1, col:col}];
       return(1)
     }
+    if(matriz[row-1][col] === m2){
+      objReturn = [{row:row-1, col:col}];
+      return(1)
+    }
   }
   if(rec === m2){
     if(matriz[row][col+1] === m1){
@@ -22,6 +26,10 @@ let valGris = (row,col,rec,m1,m2)=>{
     }
     if(matriz[row-1][col] === m1){
       objReturn = [{row:row-1, col:col}];
+      return(1)
+    }
+    if(matriz[row+1][col] === m1){
+      objReturn = [{row:row+1, col:col}];
       return(1)
     }
   }
